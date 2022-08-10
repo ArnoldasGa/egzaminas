@@ -196,7 +196,6 @@ nav :nth-last-child(1) {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 }
 
 .slides::-webkit-scrollbar {
@@ -322,7 +321,7 @@ nav :nth-last-child(1) {
 }
 
 .img2 {
-    height: 400px;
+    height: 80%;
     position: absolute;
     bottom: 0;
     right: -25px;
@@ -482,7 +481,7 @@ footer img {
 
     .p4 {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
     }
 
     .p4 .left :nth-child(2) {
