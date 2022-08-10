@@ -6,22 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="normalizer" href="normalizer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <header>
+    <header class="flex2">
         <img src="assets/logo.svg" alt="logo">
-
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        
-        <div id="myLinks">
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+        <div class="meniu" onclick="myFunction(this)">
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div> 
         </div>
     </header>
-    
+    <nav>
+        <div id="myLinks">
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Launch</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </nav>
+    <div class="firstp">
+        <div class="left">
+            <div>
+                LAUNCHING SOON
+            </div>
+            <div>
+                An NFT like no other
+            </div>
+            <div>
+                Don't miss out on the release of our new NFT. Sign up below to receive updates when we go live.
+            </div>
+            <div>
+                Sign up
+            </div>
+        </div>
+        <img class="img1" src="assets/graphic.svg" alt="">
+    </div>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "contents") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "contents";
+        }
+}
+    </script>
 </body>
 </html>
