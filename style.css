@@ -127,11 +127,6 @@ nav :nth-last-child(1) {
     padding-bottom: 20px;
     font-size: 33px;
     font-weight: 500;
-    width: 80%;
-}
-
-.p2 :nth-child(2) {
-    width: 80%;
 }
 
 .img5 {
@@ -445,7 +440,6 @@ footer img {
 
     .left :nth-child(3) {
         width: 100%;
-        /* font-size: 22px; */
         margin: 15px 0px;
     }
 
