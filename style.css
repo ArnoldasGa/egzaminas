@@ -3,13 +3,11 @@ body {
     margin: 0;
 }
 
-.flex2 {
+.flex2, .nft {
     padding: 15px;
-    position: relative;
 }
 
 header img {
-    width: 50%;
     flex-basis: auto;
 }
 
@@ -89,9 +87,12 @@ nav :nth-last-child(1) {
     line-height: 1.5;
 }
 
+.left :nth-child(4), .p2 :nth-child(1), .fontbold, .details :nth-child(1) {
+    font-weight: 600;
+}
+
 .left :nth-child(4) {
     margin: 10px 0px;
-    font-weight: 500;
     padding: 10px 23px;
     display: inline-block;
     position: relative;
@@ -126,7 +127,6 @@ nav :nth-last-child(1) {
 .p2 :nth-child(1) {
     padding-bottom: 20px;
     font-size: 33px;
-    font-weight: 500;
 }
 
 .img5 {
@@ -139,7 +139,6 @@ nav :nth-last-child(1) {
 
 .img5 :nth-child(n+1) {
     overflow: hidden;
-    position: relative;
     width: calc(50% - 20px);
 }
 
@@ -153,16 +152,13 @@ nav :nth-last-child(1) {
 }
   
 .p3 {
-    width: 80%;
-    padding-left: 15px;
+    padding: 0 15px;
     padding-bottom: 20px; 
 }
 
 .fontbold {
     padding-bottom: 20px;
     font-size: 33px;
-    font-weight: 500;
-    width: 80%;
 }
 
 .p3 .contant {
@@ -174,9 +170,7 @@ nav :nth-last-child(1) {
 .nft {
     box-sizing: border-box;
     display: flex;
-    padding: 15px;
     overflow: hidden;
-    margin-bottom: 50px;
     padding-left: 15px;
 }
 
@@ -211,7 +205,6 @@ nav :nth-last-child(1) {
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;
-    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -219,28 +212,6 @@ nav :nth-last-child(1) {
 
 .slides > div:nth-last-child(1) {
     margin: 0;
-}
-
-.slider > a {
-    display: inline-flex;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: white;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 0 0.5rem 0;
-    position: relative;
-}
-
-.slider > a:active {
-    top: 1px;
-    color: #1c87c9;
-}
-
-.slider > a:focus {
-    background: #eee;
 }
 
 .img-nft {
@@ -260,7 +231,7 @@ nav :nth-last-child(1) {
     color: orange;
 }
 
-.img-left  :nth-child(2) {
+.img-left  :nth-child(2), .img-right  :nth-child(2), .content :nth-child(1), .left :nth-child(4), .p2 :nth-child(1), .fontbold, .details :nth-child(1) {
     font-weight: 600;
 }
 
@@ -290,7 +261,6 @@ nav :nth-last-child(1) {
 .img-right  :nth-child(2) {
     display: flex;
     column-gap: 6px;
-    font-weight: 600;
     align-items: center;
 }
 
@@ -305,13 +275,9 @@ nav :nth-last-child(1) {
     padding-top: 50px;
 }
 
-.p4 .left :nth-child(2),.p4 .left :nth-child(3) {
+.p4 .left :nth-child(2),.p4 .left :nth-child(3),header img {
     width: 50%;
     margin-bottom: 10px;
-}
-
-.p4 .left :nth-child(4) {
-    margin-bottom: 50px;
 }
 
 .img2 {
@@ -352,20 +318,31 @@ footer img {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.details {
+    display: flex;
+    width: 50%;
     row-gap: 10px;
+    flex-direction: column;
+}
+
+.details :nth-child(1){
+    padding-bottom: 10px;
 }
 
 .content {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+    line-height: 1.5;
     row-gap: 5px;
     color: grey;
-    margin-bottom: 10px;
+}
+
+.content a {
+    color: gray;
 }
 
 .content :nth-child(1) {
-    font-weight: 600;
     margin-bottom: 10px;
 }
 
@@ -375,7 +352,6 @@ footer img {
     align-items: center;
     column-gap: 5px;
     color: grey;
-    margin-bottom: 50px;
 }
 
 .copyright img {
@@ -387,6 +363,10 @@ footer img {
 .date {
     color: grey;
     display: none;
+}
+
+.copyright, .p4 .left :nth-child(4), .nft {
+    margin-bottom: 50px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -424,7 +404,6 @@ footer img {
 
     .p1 {
         align-items: center;
-        padding-left: 0;
     }
 
     .img1 {
@@ -446,9 +425,10 @@ footer img {
     .p2 {
         border-radius: 10px;
         margin-left: 0;
+        padding-left: 50px;
     }
 
-    .p3, .nft ,footer {
+    .p3, .nft ,footer ,.p1{
         padding-left: 0%;
     }
 
@@ -461,13 +441,13 @@ footer img {
     }
 
     .img5 {
-        padding: 50px 0;
+        padding: 70px 0;
         flex-wrap: nowrap;  
         gap: 20px
     }
 
     .img5 :nth-child(n+1) {
-        width: 20%;
+        width: 15%;
         object-fit: contain;
         display: block;
         align-self: center;
