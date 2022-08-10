@@ -5,7 +5,6 @@ body {
 
 .flex2 {
     padding: 15px;
-    display: flex;
     position: relative;
 }
 
@@ -15,15 +14,18 @@ header img {
 }
 
 .meniu {
+    position: absolute;
+    right: 15px;
     align-self: center;
+    top: 15px;
     margin-left: auto;
     color: black;
     cursor: pointer;
 }
 
 .bars {
-    width: 20px;
-    height: 3px;
+    width: 25px;
+    height: 5px;
     background-color: grey;
     margin: 6px 0;
     border-radius: 25px;
@@ -34,14 +36,13 @@ header img {
 }
 
 nav {
-    padding-left: 15px; ;
+    padding-top: 15px; ;
     gap: 5px;
     display: flex;
     flex-direction: column;
 }
 
 nav a {
-    width: 100%;
     color: grey;
 }
 
@@ -113,11 +114,13 @@ nav :nth-last-child(1) {
 .p2 {
     overflow: hidden;
     padding-top: 80px;
-    background-size: cover;
     background-image: url(assets/background.svg);
     margin-left: -8px;
     padding-left: 23px;
     padding-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .p2 :nth-child(1) {
@@ -132,16 +135,18 @@ nav :nth-last-child(1) {
 }
 
 .img5 {
-    display: flex;    
+    display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px;
+    gap: 40px;
+    padding: 80px 20px;
+    justify-content: space-between;
 }
 
 .img5 :nth-child(n+1) {
     overflow: hidden;
     position: relative;
-    width: calc(50% - 20px);
+    height: 60px;
+    width: 195px;
 }
 
 .img5 :nth-child(1) {
@@ -328,22 +333,26 @@ footer {
 }
 
 footer img {
-    width: 50%;
+    width: auto;
     margin-bottom: 20px;
 }
 
 #collection {
     color: grey;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 20px;
 }
 
 .socials {
     display: flex;
     column-gap: 15px;
-    height: 40px;
-    width: 40px;
+
     margin-bottom: 20px;
+}
+
+.socials img {
+    height: 20px;
+    width: 20px;
 }
 
 .info {
@@ -382,8 +391,139 @@ footer img {
     margin-bottom: 0;
 }
 
+.date {
+    color: grey;
+    display: none;
+}
+
 @media only screen and (min-width: 1024px) {
-    /* body {
-        background-color: #1c87c9;
-    } */
+    body {
+        padding: 50px;
+    }
+
+    .flex2 {
+        display: flex;
+        justify-content: space-between
+    }
+
+    header img {
+        height: 50px;
+        width: auto;
+    }
+    
+    .meniu {
+        display: none;
+    }
+
+    #myLinks {
+        display: contents;
+    }
+
+    nav {
+        gap: 20px;
+        flex-direction: row;
+        align-self: center;
+    }
+
+    .left {
+        width: 50%;
+    }
+
+    .p1 {
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .img1 {
+        height: 500px;
+        position: initial;
+    }
+
+    .left :nth-child(2) {
+        width: 100%;
+        font-size: 70px;
+    }
+
+    .left :nth-child(3) {
+        width: 100%;
+        /* font-size: 22px; */
+        margin: 15px 0px;
+    }
+
+    .p2 {
+        border-radius: 10px;
+        margin-left: 0;
+    }
+
+    .p3, .nft ,footer {
+        padding-left: 0%;
+    }
+
+    .img5 {
+        padding: 50px 0;
+        flex-wrap: nowrap;  
+        gap: 20px
+    }
+
+    .img5 :nth-child(n+1) {
+        width: auto;
+        height: 40px;
+        object-fit: contain;
+        display: block;
+        overflow: inherit;
+        object-position: center;
+    }
+
+    .img2 {
+        height: 300px;
+        position: initial;
+        margin-left: 20%;
+    }
+
+    .p4 {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .p4 .left :nth-child(2) {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .p4 .left :nth-child(3) {
+        width: 60%;
+        font-size: 15px;
+    }
+
+    footer {
+        
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .footer-left {
+        width: 50%;
+    }
+
+    footer img {
+        width: auto;
+        height: 20px;
+    }
+
+    .info {
+        width: 50%;
+        flex-wrap: nowrap;
+    }
+
+    .bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } 
+    
+    .date {
+        display: block;
+    }
 }
