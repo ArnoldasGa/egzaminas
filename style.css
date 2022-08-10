@@ -140,8 +140,7 @@ nav :nth-last-child(1) {
 .img5 :nth-child(n+1) {
     overflow: hidden;
     position: relative;
-    height: 60px;
-    width: 195px;
+    width: calc(50% - 20px);
 }
 
 .img5 :nth-child(1) {
@@ -154,8 +153,8 @@ nav :nth-last-child(1) {
 }
   
 .p3 {
-    padding-left: 15px;
     width: 80%;
+    padding-left: 15px;
     padding-bottom: 20px; 
 }
 
@@ -178,6 +177,7 @@ nav :nth-last-child(1) {
     padding: 15px;
     overflow: hidden;
     margin-bottom: 50px;
+    padding-left: 15px;
 }
 
 .slider {
@@ -189,8 +189,7 @@ nav :nth-last-child(1) {
 .slides {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    /* width: 100%; */
 }
 
 .slides::-webkit-scrollbar {
@@ -201,10 +200,6 @@ nav :nth-last-child(1) {
 .slides::-webkit-scrollbar-thumb {
     background: #666;
     border-radius: 10px;
-}
-
-.slides::-webkit-scrollbar-track {
-    background: transparent;
 }
 
 .slides > div {
@@ -220,6 +215,10 @@ nav :nth-last-child(1) {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.slides > div:nth-last-child(1) {
+    margin: 0;
 }
 
 .slider > a {
@@ -429,8 +428,9 @@ footer img {
     }
 
     .img1 {
-        height: 500px;
+        height: auto;
         position: initial;
+        width: 60%;
     }
 
     .left :nth-child(2) {
@@ -452,6 +452,14 @@ footer img {
         padding-left: 0%;
     }
 
+    .slides {
+        width: 100%;
+    }
+
+    .slides > div {
+        width: calc(25% - 38px);
+    }
+
     .img5 {
         padding: 50px 0;
         flex-wrap: nowrap;  
@@ -459,23 +467,21 @@ footer img {
     }
 
     .img5 :nth-child(n+1) {
-        width: auto;
-        height: 40px;
+        width: 20%;
         object-fit: contain;
         display: block;
+        align-self: center;
         overflow: inherit;
-        object-position: center;
     }
 
     .img2 {
-        height: 300px;
+        width: 15%;
+        margin: auto;
         position: initial;
-        margin-left: 20%;
     }
 
     .p4 {
-        display: flex;
-        align-items: center;
+        display: flex;  
     }
 
     .p4 .left :nth-child(2) {
