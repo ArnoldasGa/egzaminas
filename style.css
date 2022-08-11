@@ -426,6 +426,7 @@ footer img {
         border-radius: 10px;
         margin-left: 0;
         padding-left: 50px;
+        padding-bottom: inherit;
     }
 
     .p3, .nft ,footer ,.p1{
